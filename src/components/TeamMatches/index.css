@@ -1,0 +1,75 @@
+/* Write your CSS here */
+.team-matches-bg {
+  min-height: 100vh;
+  font-family: 'Bree Serif';
+  padding: 16px;
+  color: #ffffff;
+}
+
+/* Gradient backgrounds for teams */
+.rcb-bg {
+  background-image: linear-gradient(to bottom, #a4261d, #1e293b);
+}
+
+.kkr-bg {
+  background-image: linear-gradient(to bottom, #5755a7, #1e293b);
+}
+
+.kxp-bg {
+  background-image: linear-gradient(to bottom, #d91c1f, #1e293b);
+}
+
+.csk-bg {
+  background-image: linear-gradient(to bottom, #f7db00, #1e293b);
+}
+
+.rr-bg {
+  background-image: linear-gradient(to bottom, #da237b, #1e293b);
+}
+
+.mi-bg {
+  background-image: linear-gradient(to bottom, #13418b, #1e293b);
+}
+
+.srh-bg {
+  background-image: linear-gradient(to bottom, #f26d22, #1e293b);
+}
+
+.dc-bg {
+  background-image: linear-gradient(to bottom, #4f5db0, #1e293b);
+}
+
+.default-team-bg {
+  background-color: #1e293b;
+}
+
+.team-matches-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-banner {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.latest-matches-heading {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.recent-matches-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.loader-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

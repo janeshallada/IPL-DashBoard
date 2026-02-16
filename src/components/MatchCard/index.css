@@ -1,0 +1,43 @@
+/* Write your CSS here */
+.match-card {
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding: 12px;
+  width: 48%;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .match-card {
+    width: 32%;
+  }
+}
+
+.match-card-logo {
+  width: 60px;
+  margin-bottom: 8px;
+}
+
+.match-card-team-name {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.match-card-result {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.match-card-status {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-won {
+  color: #18ed66;
+}
+
+.status-lost {
+  color: #e31a1a;
+}

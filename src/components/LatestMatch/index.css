@@ -1,0 +1,62 @@
+/* Write your CSS here */
+.latest-match-card {
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding: 16px;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.latest-match-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.latest-match-text {
+  max-width: 60%;
+}
+
+.latest-match-competing-team {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.latest-match-date {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.latest-match-venue,
+.latest-match-result {
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.latest-match-logo {
+  width: 80px;
+}
+
+.latest-divider {
+  border: 1px solid #475569;
+  margin: 12px 0;
+}
+
+.latest-match-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.latest-col {
+  min-width: 120px;
+}
+
+.latest-label {
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.latest-value {
+  font-size: 14px;
+}

@@ -1,0 +1,30 @@
+/* Write your CSS here */
+.team-card-link {
+  text-decoration: none;
+  width: 48%;
+}
+
+@media screen and (min-width: 768px) {
+  .team-card-link {
+    width: 32%;
+  }
+}
+
+.team-card {
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff33;
+}
+
+.team-card-logo {
+  width: 60px;
+  margin-right: 12px;
+}
+
+.team-card-name {
+  color: #ffffff;
+  font-size: 16px;
+}
