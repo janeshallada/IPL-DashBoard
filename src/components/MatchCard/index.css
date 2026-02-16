@@ -41,3 +41,15 @@
 .status-lost {
   color: #e31a1a;
 }
+
+.status-won {
+  color: #28a745; /* green */
+}
+
+.status-lost {
+  color: #dc3545; /* red */
+}
+
+.status-drawn {
+  color: #ffc107; /* yellow/orange */
+}

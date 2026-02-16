@@ -5,7 +5,15 @@ const MatchCard = props => {
   const {matchDetails} = props
   const {result, competingTeam, competingTeamLogo, matchStatus} = matchDetails
 
-  const statusClass = matchStatus === 'Won' ? 'status-won' : 'status-lost'
+  let statusClass = ''
+
+  if (matchStatus === 'Won') {
+    statusClass = 'status-won'
+  } else if (matchStatus === 'Lost') {
+    statusClass = 'status-lost'
+  } else {
+    statusClass = 'status-drawn'
+  }
 
   return (
     <li className="match-card">

@@ -13,7 +13,17 @@ const LatestMatch = props => {
     competingTeamLogo,
     firstInnings,
     secondInnings,
+    matchStatus,
   } = latestMatchDetails
+  let statusClass = ''
+
+  if (matchStatus === 'Won') {
+    statusClass = 'status-won'
+  } else if (matchStatus === 'Lost') {
+    statusClass = 'status-lost'
+  } else {
+    statusClass = 'status-drawn'
+  }
 
   return (
     <div className="latest-match-card">
@@ -22,7 +32,7 @@ const LatestMatch = props => {
           <p className="latest-match-competing-team">{competingTeam}</p>
           <p className="latest-match-date">{date}</p>
           <p className="latest-match-venue">{venue}</p>
-          <p className="latest-match-result">{result}</p>
+          <p className={`latest-match-result ${statusClass}`}>{result}</p>
         </div>
         <img
           src={competingTeamLogo}

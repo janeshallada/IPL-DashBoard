@@ -60,3 +60,14 @@
 .latest-value {
   font-size: 14px;
 }
+.status-won {
+  color: #28a745;
+}
+
+.status-lost {
+  color: #dc3545;
+}
+
+.status-drawn {
+  color: #ffc107;
+}

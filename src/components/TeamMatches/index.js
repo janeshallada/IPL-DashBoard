@@ -1,6 +1,9 @@
 // Write your code here
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
+import {PieChart, Pie, Cell, Legend, Tooltip} from 'recharts'
+
 import LatestMatch from '../LatestMatch'
 import MatchCard from '../MatchCard'
 import './index.css'
@@ -52,14 +55,67 @@ class TeamMatches extends Component {
     })
   }
 
+  getMatchStats = () => {
+    const {recentMatches} = this.state
+
+    let won = 0
+    let lost = 0
+    let drawn = 0
+
+    recentMatches.forEach(match => {
+      if (match.matchStatus === 'Won') {
+        won += 1
+      } else if (match.matchStatus === 'Lost') {
+        lost += 1
+      } else {
+        drawn += 1
+      }
+    })
+
+    return [
+      {name: 'Won', value: won},
+      {name: 'Lost', value: lost},
+      {name: 'Drawn', value: drawn},
+    ]
+  }
+
   renderTeamMatches = () => {
     const {teamBannerUrl, latestMatchDetails, recentMatches} = this.state
+    const statsData = this.getMatchStats()
+
+    const COLORS = ['#28a745', '#dc3545', '#ffc107']
 
     return (
       <div className="team-matches-content">
+        <Link to="/">
+          <button type="button" className="back-button">
+            Back
+          </button>
+        </Link>
+
         <img src={teamBannerUrl} alt="team banner" className="team-banner" />
         <h1 className="latest-matches-heading">Latest Matches</h1>
         <LatestMatch latestMatchDetails={latestMatchDetails} />
+
+        <div className="chart-container">
+          <PieChart width={300} height={300}>
+            <Pie
+              data={statsData}
+              dataKey="value"
+              cx="50%"
+              cy="50%"
+              outerRadius={100}
+              label
+            >
+              {statsData.map((entry, index) => (
+                <Cell key={`cell-${entry.name}`} fill={COLORS[index]} />
+              ))}
+            </Pie>
+            <Legend />
+            <Tooltip />
+          </PieChart>
+        </div>
+
         <ul className="recent-matches-list">
           {recentMatches.map(eachMatch => (
             <MatchCard key={eachMatch.id} matchDetails={eachMatch} />
@@ -74,7 +130,6 @@ class TeamMatches extends Component {
     const {params} = match
     const {id} = params
 
-    // Different gradient classes for different teams
     switch (id) {
       case 'RCB':
         return 'rcb-bg'
