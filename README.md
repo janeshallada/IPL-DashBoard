@@ -1,3 +1,4 @@
-IPL 
+# IPLDashBoard
 
-#Used Node.js,JavaScript
+Technologies Used:
+Javascript,HTML,CSS
